@@ -497,3 +497,24 @@ h1 {
 
   .prose h1 { font-size: 40px; line-height: 44px; }
 }
+
+/* Before launch (body.coming-soon): no way to get the app yet, so every
+   "Get the app" button and App Store badge is hidden and a quiet pill says
+   it's coming. */
+.soon { display: none; }
+.coming-soon [data-get-app], .coming-soon .badge, .coming-soon .modal { display: none !important; }
+.coming-soon .soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  white-space: nowrap;
+}
+.coming-soon .soon-on-ink { background: transparent; border-color: rgba(230, 221, 244, 0.35); color: var(--paper); }
