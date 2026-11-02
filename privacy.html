@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF7F1">
+  <title>Privacy — Douli</title>
+  <meta name="description" content="What Douli collects, where it goes, and how to have it removed.">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Published at https://getdouli.com/privacy.html (GitHub Pages,
+       kuma775122/douli-site). Brand.privacyPolicyURL points here. -->
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Douli home"><img src="img/logo.svg" alt="" width="149" height="36"></a>
+    <nav class="site-nav"><a href="./">Home</a></nav>
+  </header>
+
+  <main class="wrap prose">
+    <h1>Privacy</h1>
+    <p class="updated">Last updated October 17, 2026</p>
+
+    <p>Douli is made by Studio 4074 for families keeping one log of their baby's day, shared by up to four people. We collect what it takes to keep that log in sync between the people you invite, and nothing for advertising. This page says what we collect, where it goes, and how to delete it.</p>
+
+    <h2>Your account</h2>
+    <p>You sign in with Apple or Google so your household comes back if you change or lose your phone. From that sign-in we receive:</p>
+    <ul>
+      <li><strong>Your email address.</strong> With Sign in with Apple you can choose Hide My Email, and we receive a relay address instead of your own.</li>
+      <li><strong>Your name</strong>, if you share it, to fill in your name in the app.</li>
+      <li><strong>Your Google profile photo</strong>, if you sign in with Google and haven't added a photo of your own, as your picture in the app.</li>
+    </ul>
+    <p>We use these to run your account. We don't email you marketing and we don't share them.</p>
+
+    <h2>What you log</h2>
+    <ul>
+      <li><strong>Your baby's log:</strong> feeds, sleep, diaper changes, growth measurements (weight, length, head size), checkup visits, and the questions you save for your pediatrician. This is health information about your child.</li>
+      <li><strong>Names:</strong> your baby's name and birth date, and the names each member gives themselves.</li>
+      <li><strong>Photos:</strong> only a profile photo you choose to add.</li>
+    </ul>
+    <p>This is kept on your phone and synced through our servers (hosted by Supabase) so that everyone in a household sees the same log. Only members of your household can read it. It's encrypted in transit.</p>
+
+    <h2>People in your household</h2>
+    <p>Everything in a household's log is shared with everyone in it, up to four people, including the name and photo you use. Each entry shows who logged it. When someone leaves or is removed, their access ends and the household's invite code changes.</p>
+
+    <h2>Douli AI</h2>
+    <p>Douli AI is optional and off until you agree to it. When you ask a question, your question and the parts of your baby's log it needs are sent from your phone to Anthropic, our AI provider, to write the answer. Anthropic processes them to answer you and, under its commercial terms, doesn't use them to train its models. Your conversations are kept on your phone. On our servers we record only how many questions were asked and what they cost, to enforce limits and prevent abuse, not what was asked or answered.</p>
+    <p>Douli AI is a guide to your own records, not medical advice. For anything about your baby's health, talk to your pediatrician.</p>
+
+    <h2>Subscriptions</h2>
+    <p>Douli AI is a subscription sold through the App Store. Apple handles payment, and we never see your payment details. We receive the subscription's status from Apple (active, in a trial, expired) so we can turn Douli AI on for your household.</p>
+
+    <h2>How the app is used</h2>
+    <p>To understand how Douli is used and where it can improve, the app counts a small, fixed set of events in our own database: opening the app, reaching each step of setup, creating or joining a household, logging an entry (its type only, such as "diaper" or "sleep", never what it says), sharing an invite, opening the weekly summary, turning notifications on or off, and the steps of trying and subscribing to Douli AI. Each carries a random identifier for the install, not your name, email, account, household or baby, and nothing you logged or asked. We use the counts only ourselves; they aren't combined with data from other companies, used for advertising, or shared with anyone.</p>
+    <p>If you allow notifications, we store your device's push token so entries from others in your household can reach you.</p>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>No ads, and no third-party advertising, analytics or tracking SDKs. We don't track you across other companies' apps or websites.</li>
+      <li>We don't sell your data or share it with anyone except the providers named here (Supabase, Anthropic, Apple, Google), who process it only to run the app.</li>
+    </ul>
+
+    <h2>Deleting your data</h2>
+    <p>You can delete your account in the app: Settings, then Delete account. It takes effect immediately:</p>
+    <ul>
+      <li>If you're the only member of your household, the whole household is deleted: every entry, measurement, visit, question and photo.</li>
+      <li>If anyone else is still in it, the shared log stays with them. Your name, photo and push token are removed, and entries you logged stay in their log, marked "Former member".</li>
+      <li>Your sign-in, subscription record and usage records are deleted, and if you used Sign in with Apple, the app's access to your Apple ID is revoked.</li>
+    </ul>
+    <p>Deleting your account doesn't cancel an App Store subscription. Cancel that in your Apple ID's subscription settings.</p>
+    <p>You can also leave a household from Settings without deleting your account; the shared log stays with the others in it.</p>
+
+    <h2>Children</h2>
+    <p>Douli is used by parents to record information about their child. It isn't directed at children, and children don't use it.</p>
+
+    <h2>Changes</h2>
+    <p>If we change what we collect or how we use it, we'll update this page and the date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or your data: <a href="mailto:hello@getdouli.com">hello@getdouli.com</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand"><span>A calmer way to parent.</span></div>
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="mailto:hello@getdouli.com">Contact</a>
+        <span class="footer-copy">© Douli 2026</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
