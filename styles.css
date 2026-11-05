@@ -101,6 +101,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 500; text-wrap
 .badge img { width: 100%; height: auto; }
 
 .text-link { font-size: 14px; font-weight: 500; line-height: 20px; color: #000000; text-decoration: none; }
+.hero-how { display: none; }
 .text-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Header */
@@ -447,8 +448,9 @@ h1 {
   .brand { gap: 8px; }
   .brand-symbol { width: 30px; height: 27px; }
   .brand-wordmark { width: 79px; height: 28px; }
-  /* The section link stays; "Get the app" gives way to the badge. */
-  .site-nav .button { display: none; }
+  /* The section link moves under the hero's button. */
+  .site-nav { display: none; }
+  .hero-how { display: inline; }
   .badge-nav { display: block; width: 120px; }
 
   .hero { flex-direction: column; gap: 42px; min-height: 0; padding-top: 44px; padding-bottom: 0; }
