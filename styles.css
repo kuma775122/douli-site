@@ -117,8 +117,8 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 500; text-wrap
 }
 
 .site-nav { display: flex; align-items: center; gap: 36px; }
-.site-nav > a { font-size: 14px; font-weight: 500; line-height: 20px; color: #000000; text-decoration: none; }
-.site-nav > a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.site-nav > a:not(.button) { font-size: 14px; font-weight: 500; line-height: 20px; color: #000000; text-decoration: none; }
+.site-nav > a:not(.button):hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Hero */
 
@@ -450,7 +450,7 @@ h1 {
   .brand-wordmark { width: 79px; height: 28px; }
   /* The section link moves under the hero's button. */
   .site-nav { display: none; }
-  .hero-how { display: inline; }
+  .hero-how { display: inline-flex; }
   .badge-nav { display: block; width: 120px; }
 
   .hero { flex-direction: column; gap: 42px; min-height: 0; padding-top: 44px; padding-bottom: 0; }
@@ -460,7 +460,7 @@ h1 {
   h1 { margin-top: 20px; font-size: 57px; line-height: 59px; letter-spacing: -0.05em; }
   .lede { margin-top: 24px; font-size: 17px; line-height: 27px; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 30px; }
-  .hero-actions .button { display: none; }
+  .hero-actions .button:not(.hero-how) { display: none; }
   .badge-hero { display: block; width: 180px; }
   .hero-note { display: none; }
 
