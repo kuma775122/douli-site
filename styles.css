@@ -459,6 +459,15 @@ h1 {
   .lede { margin-top: 24px; font-size: 17px; line-height: 27px; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 30px; }
   .hero-actions .button:not(.hero-how) { display: none; }
+  .hero-actions { align-items: stretch; align-self: stretch; }
+  .hero-actions .soon,
+  .hero-actions .hero-how {
+    box-sizing: border-box;
+    width: 100%;
+    height: 56px;
+    padding-block: 0;
+    justify-content: center;
+  }
   .badge-hero { display: block; width: 180px; }
   .hero-note { display: none; }
 
