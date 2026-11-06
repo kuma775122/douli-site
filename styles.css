@@ -139,6 +139,9 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 500; text-wrap
   flex: 0 0 570px;
   min-width: 0;
   padding-top: 36px;
+  /* The headline sizes itself to this column (cqi), so it stays on two lines
+     however narrow the column gets. */
+  container-type: inline-size;
 }
 
 .eyebrow {
@@ -147,22 +150,25 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 500; text-wrap
   gap: 10px;
   margin: 0;
   color: var(--body);
-  font-size: 15px;
+  font-size: clamp(14px, 0.1vw + 13.6px, 15px);
   font-weight: 500;
-  line-height: 22px;
+  line-height: 1.45;
 }
 
 .dot { width: 6px; height: 6px; border-radius: 99px; background: var(--lavender); flex: none; }
 
 h1 {
   margin-top: 24px;
-  font-size: 84px;
-  line-height: 88px;
+  /* Fluid between phone and desktop instead of stepping at breakpoints:
+     57px on a 390-wide phone, 84px from 1440 up. */
+  /* "A calmer way" runs about 5.4× the font size, so 18cqi keeps it on one line. */
+  font-size: min(clamp(50px, 2.57vw + 47px, 84px), 18cqi);
+  line-height: 1.05;
   letter-spacing: -0.055em;
   color: var(--ink);
 }
 
-.lede { margin: 26px 0 0; max-width: 470px; color: var(--body); font-size: 19px; line-height: 30px; }
+.lede { margin: 26px 0 0; max-width: 470px; color: var(--body); font-size: clamp(16px, 0.28vw + 15px, 19px); line-height: 1.58; }
 
 .hero-actions { display: flex; align-items: center; gap: 24px; margin-top: 34px; flex-wrap: wrap; }
 .hero-note { margin: 18px 0 0; color: var(--body); font-size: 13px; line-height: 20px; }
@@ -418,17 +424,17 @@ h1 {
 }
 
 @media (max-width: 1180px) {
-  h1 { font-size: 72px; line-height: 76px; }
   .hero-copy { flex: 1 1 auto; }
   .hero-art { zoom: 0.74; }
   .benefit-grid { gap: 28px; }
   .closing h2 { font-size: 48px; line-height: 54px; }
 }
 
+/* Too narrow for two columns: the copy above, the art centred below. */
 @media (max-width: 960px) {
-  h1 { font-size: 62px; line-height: 66px; }
-  .lede { font-size: 17px; line-height: 27px; }
-  .hero-art { zoom: 0.62; }
+  .hero { flex-direction: column; gap: 40px; min-height: 0; padding-top: 56px; }
+  .hero-copy { flex: none; padding-top: 0; }
+  .hero-art { align-self: center; zoom: 0.8; }
   .benefits-head { flex-direction: column; align-items: flex-start; gap: 16px; }
   .benefits-head p { flex: none; }
 }
@@ -453,10 +459,9 @@ h1 {
 
   .hero { flex-direction: column; gap: 42px; min-height: 0; padding-top: 44px; padding-bottom: 0; }
   .hero-copy { flex: none; padding-top: 0; }
-  .eyebrow { font-size: 14px; line-height: 20px; }
   .dot { display: none; }
-  h1 { margin-top: 20px; font-size: 57px; line-height: 59px; letter-spacing: -0.05em; }
-  .lede { margin-top: 24px; font-size: 17px; line-height: 27px; }
+  h1 { margin-top: 20px; letter-spacing: -0.05em; }
+  .lede { margin-top: 24px; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 30px; }
   .hero-actions .button:not(.hero-how) { display: none; }
   .hero-actions { align-items: stretch; align-self: stretch; }
