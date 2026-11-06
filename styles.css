@@ -435,6 +435,11 @@ h1 {
   .hero { flex-direction: column; gap: 40px; min-height: 0; padding-top: 56px; }
   .hero-copy { flex: none; padding-top: 0; }
   .hero-art { align-self: center; zoom: 0.8; }
+  /* One column: the headline and lede run to the right edge instead of
+     breaking where the two-column design did. */
+  .hero h1 br, .lede br { display: none; }
+  .hero h1 { text-wrap: wrap; }
+  .lede { max-width: none; }
   .benefits-head { flex-direction: column; align-items: flex-start; gap: 16px; }
   .benefits-head p { flex: none; }
 }
