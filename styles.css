@@ -442,6 +442,8 @@ h1 {
   .lede { max-width: none; }
   .benefits-head { flex-direction: column; align-items: flex-start; gap: 16px; }
   .benefits-head p { flex: none; }
+  .benefits-head br { display: none; }
+  .benefits-head h2 { text-wrap: wrap; }
 }
 
 /* Phones: the Mobile artboard. One column, App Store badges in place of the
